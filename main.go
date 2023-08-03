@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
 
 	"player_backend/controllers"
 	"player_backend/initializers"
@@ -30,7 +29,7 @@ func main(){
 	router.GET("/players/rank/:val", controllers.RankPlayers)
 	router.GET("/players/random", controllers.RandomPlayer)
 
-	if err := router.Run(":" + os.Getenv("PORT")); err != nil{
+	if err := router.Run(":3000"); err != nil{
 		log.Fatal(err)
 	}
 }
