@@ -13,7 +13,7 @@ import (
 )
 
 type Player struct{
-	ID      		uint 					`json:"id"`
+	ID      		uint 					`json:"id" validate:"required"`
 	Name    	    string 					`json:"name" validate:"required,max=15"`
 	Country 	    string  				`json:"country" validate:"required,uppercase,len=2"`
 	Score   		uint 					`json:"score" validate:"required"`
